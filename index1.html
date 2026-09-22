@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcadores Nutricionales en PEP Infantojuvenil - XXIX Congreso Nacional de Psiquiatría</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vue 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        petrol: {
+                            50: '#f2f8f8',
+                            100: '#e1eff0',
+                            200: '#c5e0e2',
+                            500: '#328289',
+                            800: '#235e63', // Color Primario Oficial
+                            900: '#1c4c50',
+                        },
+                        mint: {
+                            300: '#a3ded5',
+                            400: '#70c1b3', // Color Secundario Oficial
+                            500: '#51a99a',
+                            600: '#3d8c7e',
+                        },
+                        gold: {
+                            400: '#e2b974',
+                            500: '#d4a359', // Acento Oficial
+                            600: '#b8853b',
+                        },
+                        softbg: '#f4f7f6', // Fondo Tenue Oficial
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
+            color: #1e293b;
+        }
+
+        /* Gradient header background */
+        .bg-petrol-gradient {
+            background: linear-gradient(135deg, #1c4c50 0%, #235e63 50%, #2c757c 100%);
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 163, 89, 0.25);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f7f6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #70c1b3;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased bg-softbg text-slate-800" id="app">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-petrol-900/95 backdrop-blur-md text-white border-b border-petrol-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="p-2 bg-mint-400/20 text-mint-400 rounded-lg border border-mint-400/30">
+                    <i data-lucide="qr-code" class="w-5 h-5"></i>
+                </span>
+                <div>
+                    <span class="text-xs font-semibold text-mint-400 uppercase tracking-wider block">Recurso Digital Póster</span>
+                    <h1 class="text-xs sm:text-sm font-bold text-white leading-tight">XXIX Congreso Nacional de Psiquiatría</h1>
+                </div>
+            </div>
+
+            <!-- Quick Navigation Links -->
+            <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-200">
+                <a href="#resumen" class="hover:text-mint-400 transition">Resumen y Vacíos</a>
+                <a href="#evidencia" class="hover:text-mint-400 transition">Tabla de Evidencia</a>
+                <a href="#contacto" class="hover:text-mint-400 transition">Contacto Investigadores</a>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <span class="text-[11px] bg-gold-500/20 border border-gold-500/40 text-gold-400 px-2.5 py-1 rounded-full font-mono font-semibold">
+                    Sevilla 2026
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Header Section -->
+    <header class="bg-petrol-gradient text-white py-10 sm:py-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#70c1b3_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-mint-300 mb-4">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"></i>
+                <span>XXIX Congreso Nacional de Psiquiatría • Sevilla, 12-14 Noviembre 2026</span>
+            </div>
+
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                Marcadores Nutricionales en el Primer Episodio Psicótico en Niños y Adolescentes: Utilidad en la Práctica Clínica
+            </h1>
+
+            <!-- Authors & Affiliation -->
+            <div class="mt-6 pt-6 border-t border-white/15 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-200">
+                <div>
+                    <p class="text-mint-300 font-semibold uppercase text-[11px] tracking-wider mb-1">Equipo Investigador</p>
+                    <p class="font-medium text-white">Javier de Otazu Olivares, Nathalia Garrido, Miguel Ruiz-Veguilla y Benedicto Crespo-Facorro</p>
+                </div>
+                <div>
+                    <p class="text-mint-300 font-semibold uppercase text-[11px] tracking-wider mb-1">Filiación Institucional</p>
+                    <p class="leading-relaxed">Unidad de Salud Mental, Hospital Universitario Virgen del Rocío / Instituto de Biomedicina de Sevilla (IBiS) / CIBERSAM, Sevilla, España.</p>
+                </div>
+            </div>
+
+            <!-- Key Quick Metrics Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
+                    <span class="block text-2xl font-black text-mint-400">6</span>
+                    <span class="text-[11px] text-slate-200">Estudios Sistematizados</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
+                    <span class="block text-2xl font-black text-gold-400">Grado A</span>
+                    <span class="text-[11px] text-slate-200">Máxima Evidencia (ECA)</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
+                    <span class="block text-2xl font-black text-mint-400">70%</span>
+                    <span class="text-[11px] text-slate-200">Déficit de Vitamina D</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
+                    <span class="block text-2xl font-black text-rose-300">0</span>
+                    <span class="text-[11px] text-slate-200">Estudios en Hierro/Minerales</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+        <!-- SECTION A: Executive Summary & Evidence Gap Identification -->
+        <section id="resumen" class="scroll-mt-20">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="w-2.5 h-7 bg-petrol-800 rounded-full"></span>
+                <h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900">SECCIÓN A: Resumen Ejecutivo e Identificación de Vacíos</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                <!-- Objective Card (7 cols) -->
+                <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 text-petrol-800 font-bold text-xs uppercase tracking-wider mb-2">
+                            <i data-lucide="target" class="w-4 h-4 text-mint-500"></i>
+                            <span>Objetivo Principal de la Revisión</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">
+                            Evaluación Diagnóstica y Coste-Eficiencia en el Debut Psicótico
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            La evaluación inicial del primer episodio psicótico (PEP) en niños y adolescentes representa una ventana de oportunidad crítica para la intervención precoz. El objetivo de este trabajo es determinar si la evidencia científica disponible justifica la inclusión sistemática de marcadores nutricionales (parámetros de hierro, vitaminas y minerales) en el protocolo diagnóstico inicial, definiendo sus indicaciones clínicas y su coste-eficiencia.
+                        </p>
+                    </div>
+
+                    <div class="bg-softbg p-4 rounded-xl border border-slate-200/90 text-xs text-slate-700 flex items-start gap-3 mt-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5 text-gold-500 shrink-0 mt-0.5"></i>
+                        <p>
+                            <strong>Implicación Clínica:</strong> Identificar qué biomarcadores nutricionales muestran valor pronóstico o terapéutico real evita pruebas analíticas innecesarias y orienta la suplementación oportuna.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visual Alert: Evidence Gap Card (5 cols) -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-amber-50 to-orange-50/60 rounded-2xl p-6 sm:p-7 shadow-sm border border-amber-200/80 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-amber-500 text-white rounded-full text-[11px] font-bold tracking-wide uppercase flex items-center gap-1.5 shadow-xs">
+                                <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> Alerta Metodológica
+                            </span>
+                            <span class="text-xs font-semibold text-amber-800">Vacío de Evidencia</span>
+                        </div>
+
+                        <h3 class="text-base font-bold text-amber-950 mb-2">
+                            Ausencia Total de Estudios en Hierro y Minerales
+                        </h3>
+
+                        <p class="text-xs text-amber-900/90 leading-relaxed mb-4">
+                            De las tres categorías teóricas de marcadores evaluadas, la literatura científica en PEP infantojuvenil se encuentra restringida a <strong>Vitaminas</strong>.
+                        </p>
+
+                        <!-- Visual Breakdown Grid -->
+                        <div class="space-y-2">
+                            <!-- Vitamins (Evaluated) -->
+                            <div class="bg-white/80 backdrop-blur-xs p-2.5 rounded-lg border border-emerald-200 flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-xs font-semibold text-emerald-900">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                                    <span>Vitaminas (D, B1, B6, B9/Folato, B12)</span>
+                                </div>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Evaluado (6 est.)</span>
+                            </div>
+
+                            <!-- Iron Parameters (Missing) -->
+                            <div class="bg-white/80 backdrop-blur-xs p-2.5 rounded-lg border border-rose-200 flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-xs font-semibold text-rose-950">
+                                    <i data-lucide="x-circle" class="w-4 h-4 text-rose-600"></i>
+                                    <span>Hierro (Ferritina, Hierro sérico)</span>
+                                </div>
+                                <span class="text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded">0 Estudios</span>
+                            </div>
+
+                            <!-- Minerals (Missing) -->
+                            <div class="bg-white/80 backdrop-blur-xs p-2.5 rounded-lg border border-rose-200 flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-xs font-semibold text-rose-950">
+                                    <i data-lucide="x-circle" class="w-4 h-4 text-rose-600"></i>
+                                    <span>Minerales (Zinc, Cu, Ca, P, Mg)</span>
+                                </div>
+                                <span class="text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded">0 Estudios</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-[11px] text-amber-800 italic mt-4 pt-3 border-t border-amber-200/60">
+                        *Se requieren futuros ensayos clínicos para validar parámetros férricos y mineralogramas en debut psicótico.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION B: Dynamic Table of Scientific Evidence -->
+        <section id="evidencia" class="scroll-mt-20">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-7 bg-petrol-800 rounded-full"></span>
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900">SECCIÓN B: Tabla Dinámica de Evidencia Científica</h2>
+                        <p class="text-xs text-slate-500">6 estudios sistematizados • Enlaces directos a PubMed</p>
+                    </div>
+                </div>
+
+                <!-- View Toggle Buttons -->
+                <div class="flex items-center bg-slate-200/80 p-1 rounded-xl text-xs">
+                    <button 
+                        @click="viewMode = 'table'" 
+                        :class="viewMode === 'table' ? 'bg-white text-petrol-900 shadow-xs font-bold' : 'text-slate-600 font-medium'"
+                        class="px-3 py-1.5 rounded-lg transition flex items-center gap-1.5"
+                    >
+                        <i data-lucide="table" class="w-3.5 h-3.5"></i>
+                        <span class="hidden sm:inline">Vista</span> Tabla
+                    </button>
+                    <button 
+                        @click="viewMode = 'cards'" 
+                        :class="viewMode === 'cards' ? 'bg-white text-petrol-900 shadow-xs font-bold' : 'text-slate-600 font-medium'"
+                        class="px-3 py-1.5 rounded-lg transition flex items-center gap-1.5"
+                    >
+                        <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
+                        <span class="hidden sm:inline">Vista</span> Tarjetas
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters Bar Card -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200 mb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3">
+
+                    <!-- Search Input (5 cols) -->
+                    <div class="lg:col-span-5 relative">
+                        <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <input 
+                            type="text" 
+                            v-model="searchQuery" 
+                            placeholder="Buscar autor, prueba (ej. PANSS, CogState), vitamina..." 
+                            class="w-full pl-10 pr-8 py-2 bg-softbg rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-petrol-800 transition"
+                        />
+                        <button v-if="searchQuery" @click="searchQuery = ''" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600">
+                            ✕
+                        </button>
+                    </div>
+
+                    <!-- Nutrient Filter (3 cols) -->
+                    <div class="lg:col-span-3">
+                        <select v-model="filterNutrient" class="w-full bg-softbg rounded-xl border border-slate-200 text-xs py-2 px-3 focus:outline-none focus:ring-2 focus:ring-petrol-800 text-slate-700 font-medium">
+                            <option value="ALL">Todos los Nutrientes</option>
+                            <option value="Vitamina D">Vitamina D</option>
+                            <option value="Complejo B">Complejo B / Folato</option>
+                        </select>
+                    </div>
+
+                    <!-- SIGN Grade Filter (3 cols) -->
+                    <div class="lg:col-span-3">
+                        <select v-model="filterSign" class="w-full bg-softbg rounded-xl border border-slate-200 text-xs py-2 px-3 focus:outline-none focus:ring-2 focus:ring-petrol-800 text-slate-700 font-medium">
+                            <option value="ALL">Todos los Grados SIGN</option>
+                            <option value="Grado A">Grado A (ECA / Evidencia Alta)</option>
+                            <option value="Grado B">Grado B (Cohortes)</option>
+                            <option value="Grado C">Grado C (Casos-Control / Transversal)</option>
+                        </select>
+                    </div>
+
+                    <!-- Reset Button (1 col) -->
+                    <div class="lg:col-span-1 flex items-center">
+                        <button @click="resetFilters" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1" title="Restablecer Filtros">
+                            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active Filters Count Footer -->
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span>Mostrando <strong>{{ filteredStudies.length }}</strong> de <strong>{{ studies.length }}</strong> estudios</span>
+                    <span class="italic text-[11px] text-slate-400">* Resaltados p &lt; 0.05 en negrita verde</span>
+                </div>
+            </div>
+
+            <!-- TABLE VIEW -->
+            <div v-if="viewMode === 'table'" class="overflow-x-auto bg-white rounded-2xl shadow-sm border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-petrol-900 text-white text-xs uppercase tracking-wider font-bold">
+                            <th class="p-4 w-[18%] border-r border-petrol-800">Estudio y Referencia</th>
+                            <th class="p-4 w-[16%] border-r border-petrol-800">Diseño y Muestra</th>
+                            <th class="p-4 w-[14%] border-r border-petrol-800">Micronutriente</th>
+                            <th class="p-4 w-[38%] border-r border-petrol-800">Hallazgos Clave y Significación Estadística</th>
+                            <th class="p-4 w-[14%] text-center">Nivel / Grado (SIGN)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-xs text-slate-700">
+                        <tr 
+                            v-for="(study, idx) in filteredStudies" 
+                            :key="study.id"
+                            :class="idx % 2 === 0 ? 'bg-white' : 'bg-softbg/60'"
+                            class="hover:bg-mint-300/15 transition-colors"
+                        >
+                            <!-- Col 1: Study & PMID Button -->
+                            <td class="p-4 align-top border-r border-slate-200">
+                                <div class="font-bold text-slate-900 text-sm mb-1">{{ study.authors }}</div>
+                                <div class="text-slate-500 text-[11px] mb-2 font-mono">{{ study.year }}</div>
+
+                                <!-- PubMed Direct Link Button -->
+                                <a 
+                                    :href="study.pubmedUrl" 
+                                    target="_blank" 
+                                    class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition"
+                                >
+                                    <span>Ver en PubMed</span>
+                                    <i data-lucide="external-link" class="w-3 h-3 text-petrol-800"></i>
+                                </a>
+                            </td>
+
+                            <!-- Col 2: Design & Sample -->
+                            <td class="p-4 align-top border-r border-slate-200">
+                                <span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800">
+                                    {{ study.design }}
+                                </span>
+                                <p class="font-bold text-slate-900 text-[11px] mb-0.5">N = {{ study.sampleN }}</p>
+                                <p class="text-slate-600 leading-tight text-[11px]">{{ study.sampleDetails }}</p>
+                            </td>
+
+                            <!-- Col 3: Micronutrient -->
+                            <td class="p-4 align-top border-r border-slate-200">
+                                <div class="font-bold text-petrol-900 text-xs mb-1 flex items-center gap-1">
+                                    <i data-lucide="pill" class="w-3.5 h-3.5 text-mint-500"></i>
+                                    <span>{{ study.micronutrient }}</span>
+                                </div>
+                                <span class="text-[10px] text-slate-500 block leading-tight">{{ study.micronutrientForm }}</span>
+                            </td>
+
+                            <!-- Col 4: Key Findings Desaggregated -->
+                            <td class="p-4 align-top border-r border-slate-200 space-y-2">
+                                <!-- Positive/Significant Findings -->
+                                <div v-if="study.positiveResults.length > 0">
+                                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1">
+                                        Hallazgos Significativos / Efectos
+                                    </span>
+                                    <ul class="space-y-1 pl-2">
+                                        <li v-for="(pos, pIdx) in study.positiveResults" :key="pIdx" class="text-[11px] leading-snug flex items-start gap-1.5">
+                                            <span class="text-emerald-600 font-bold">•</span>
+                                            <span v-html="formatResultText(pos)"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Neutral/Non-significant Findings -->
+                                <div v-if="study.neutralResults.length > 0">
+                                    <span class="text-[10px] font-bold uppercase text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 inline-block mb-1">
+                                        Resultados Neutros / No Significativos
+                                    </span>
+                                    <ul class="space-y-1 pl-2">
+                                        <li v-for="(neu, nIdx) in study.neutralResults" :key="nIdx" class="text-[11px] leading-snug text-slate-600 flex items-start gap-1.5">
+                                            <span class="text-slate-400 font-bold">•</span>
+                                            <span v-html="formatResultText(neu)"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <!-- Col 5: SIGN Level Badge -->
+                            <td class="p-4 align-top text-center">
+                                <div 
+                                    class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border shadow-xs"
+                                    :class="getSignBadgeClass(study.signGrade)"
+                                >
+                                    <div>{{ study.signLevel }}</div>
+                                    <div class="text-[10px] opacity-90">({{ study.signGrade }})</div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr v-if="filteredStudies.length === 0">
+                            <td colspan="5" class="p-8 text-center text-slate-500 bg-softbg">
+                                <i data-lucide="search-x" class="w-8 h-8 mx-auto mb-2 text-slate-400"></i>
+                                <p class="font-semibold">No se encontraron estudios con los filtros seleccionados.</p>
+                                <button @click="resetFilters" class="mt-2 text-xs text-petrol-800 underline font-medium">Restablecer filtros</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- CARDS VIEW (Ideal for Mobile screens) -->
+            <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div 
+                    v-for="study in filteredStudies" 
+                    :key="study.id"
+                    class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between space-y-4 hover:border-mint-400 transition"
+                >
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900">{{ study.authors }} <span class="text-xs font-normal text-slate-500">({{ study.year }})</span></h3>
+                                <p class="text-xs font-semibold text-petrol-800">{{ study.design }} • N = {{ study.sampleN }}</p>
+                            </div>
+                            <span 
+                                class="px-2.5 py-1 rounded-lg text-xs font-black border shrink-0"
+                                :class="getSignBadgeClass(study.signGrade)"
+                            >
+                                {{ study.signLevel }} ({{ study.signGrade }})
+                            </span>
+                        </div>
+
+                        <div class="text-xs bg-softbg p-2.5 rounded-xl mb-3">
+                            <span class="font-bold text-petrol-900 block mb-0.5">Nutriente: {{ study.micronutrient }}</span>
+                            <span class="text-[11px] text-slate-500">{{ study.sampleDetails }}</span>
+                        </div>
+
+                        <!-- Results Breakdown -->
+                        <div class="space-y-2 text-xs">
+                            <div v-if="study.positiveResults.length > 0">
+                                <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded inline-block mb-1">
+                                    Hallazgos Significativos
+                                </span>
+                                <ul class="space-y-1">
+                                    <li v-for="(pos, pIdx) in study.positiveResults" :key="pIdx" class="text-[11px] leading-snug" v-html="'• ' + formatResultText(pos)"></li>
+                                </ul>
+                            </div>
+
+                            <div v-if="study.neutralResults.length > 0">
+                                <span class="text-[10px] font-bold uppercase text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded inline-block mb-1">
+                                    Resultados Neutros
+                                </span>
+                                <ul class="space-y-1 text-slate-600">
+                                    <li v-for="(neu, nIdx) in study.neutralResults" :key="nIdx" class="text-[11px] leading-snug" v-html="'• ' + formatResultText(neu)"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-t border-slate-100 flex justify-end">
+                        <a 
+                            :href="study.pubmedUrl" 
+                            target="_blank" 
+                            class="inline-flex items-center gap-1.5 text-xs font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-3 py-1.5 rounded-lg border border-petrol-200 transition"
+                        >
+                            <span>Ver Artículo en PubMed</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION C: Contact Form & Scientific Feedback -->
+        <section id="contacto" class="scroll-mt-20">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="w-2.5 h-7 bg-petrol-800 rounded-full"></span>
+                <h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900">SECCIÓN C: Formulario de Contacto y Feedback Científico</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+
+                <!-- Left Info Side (5 cols) -->
+                <div class="lg:col-span-5 bg-petrol-gradient p-6 sm:p-8 text-white flex flex-col justify-between">
+                    <div>
+                        <span class="px-3 py-1 bg-white/10 rounded-full text-xs font-semibold text-mint-300 border border-white/15">
+                            Atención a Congresistas
+                        </span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">Contacto con el Equipo Investigador</h3>
+                        <p class="text-xs text-slate-200 leading-relaxed mb-6">
+                            ¿Tiene dudas sobre la metodología de la revisión, desea sugerir un trabajo colaborativo o solicitar el artículo completo? Envíenos un mensaje directo.
+                        </p>
+
+                        <div class="space-y-4 text-xs text-slate-200">
+                            <div class="flex items-start gap-3">
+                                <div class="p-2 bg-white/10 rounded-lg text-mint-400 shrink-0">
+                                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-white">Hospital Universitario Virgen del Rocío</p>
+                                    <p class="text-[11px] text-slate-300">Unidad de Salud Mental / IBiS / CIBERSAM</p>
+                                    <p class="text-[11px] text-slate-300">Sevilla, España</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-white/10 rounded-lg text-mint-400 shrink-0">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-white">Correspondencia Científica</p>
+                                    <p class="text-[11px] text-slate-300">investigacion.psiquiatria@huvr.es</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/15 text-[11px] text-mint-300/90">
+                        Presentado en el XXIX Congreso Nacional de Psiquiatría • Sevilla 2026
+                    </div>
+                </div>
+
+                <!-- Right Form Side (7 cols) -->
+                <div class="lg:col-span-7 p-6 sm:p-8">
+                    <form @submit.prevent="submitForm" class="space-y-4">
+                        <div v-if="submitted" class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                            <div>
+                                <p class="font-bold">¡Mensaje enviado con éxito!</p>
+                                <p class="text-[11px]">Gracias por su interés. El equipo investigador responderá a la brevedad posible.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre y Apellidos *</label>
+                                <input 
+                                    type="text" 
+                                    v-model="form.name" 
+                                    required 
+                                    placeholder="Ej. Dra. Carmen Ruiz" 
+                                    class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"
+                                />
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Centro Hospitalario / Universidad</label>
+                                <input 
+                                    type="text" 
+                                    v-model="form.institution" 
+                                    placeholder="Ej. Hospital Clínico San Carlos" 
+                                    class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico de Contacto *</label>
+                            <input 
+                                type="email" 
+                                v-model="form.email" 
+                                required 
+                                placeholder="ejemplo@hospital.es" 
+                                class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"
+                            />
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tipo de Consulta *</label>
+                            <select v-model="form.type" required class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition text-slate-700 font-medium">
+                                <option value="" disabled>Seleccione el motivo de su mensaje</option>
+                                <option value="Consulta metodológica">Consulta metodológica / Selección de artículos</option>
+                                <option value="Sugerencia de colaboración">Sugerencia de colaboración científica</option>
+                                <option value="Pregunta clínica">Pregunta clínica sobre suplementación</option>
+                                <option value="Otro">Otro asunto</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mensaje o Comentarios *</label>
+                            <textarea 
+                                v-model="form.message" 
+                                required 
+                                rows="4" 
+                                placeholder="Escriba aquí sus comentarios o preguntas para los autores del póster..." 
+                                class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"
+                            ></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button 
+                                type="submit" 
+                                class="w-full sm:w-auto px-6 py-3 bg-petrol-800 hover:bg-petrol-900 text-white font-bold text-xs rounded-xl shadow-md transition flex items-center justify-center gap-2"
+                            >
+                                <i data-lucide="send" class="w-4 h-4 text-mint-400"></i>
+                                <span>Enviar mensaje al equipo investigador (HU Virgen del Rocío)</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-petrol-900 text-white py-8 border-t border-petrol-800 mt-12 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-semibold text-mint-300">XXIX Congreso Nacional de Psiquiatría • Sevilla, 2026</p>
+            <p class="text-slate-400 text-[11px]">
+                Cita de Referencia: de Otazu Olivares J, Garrido N, Ruiz-Veguilla M, Crespo-Facorro B. Marcadores Nutricionales en el Primer Episodio Psicótico en Niños y Adolescentes: Utilidad en la Práctica Clínica. XXIX Congreso Nacional de Psiquiatría; 2026.
+            </p>
+            <p class="text-slate-500 text-[10px] pt-2">Página optimizada para lectura e interacción móvil vía código QR.</p>
+        </div>
+    </footer>
+
+    <!-- Vue 3 App Script -->
+    <script>
+        const { createApp, ref, computed, onMounted, updated } = Vue;
+
+        createApp({
+            setup() {
+                const viewMode = ref('table');
+                const searchQuery = ref('');
+                const filterNutrient = ref('ALL');
+                const filterSign = ref('ALL');
+
+                const submitted = ref(false);
+                const form = ref({
+                    name: '',
+                    institution: '',
+                    email: '',
+                    type: '',
+                    message: ''
+                });
+
+                // Dataset with 6 systematic review articles
+                const studies = ref([
+                    {
+                        id: 1,
+                        authors: 'Allott et al.',
+                        year: '2019',
+                        pmid: '30771856',
+                        pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/30771856/',
+                        design: 'ECA (Ensayo Clínico Aleatorizado)',
+                        sampleN: '100 analizados',
+                        sampleDetails: '120 elegibles. Casos: 20.2±3.0 años (65.4% M); Controles: 19.6±2.4 años (70.0% M)',
+                        micronutrient: 'Complejo B',
+                        micronutrientForm: 'B6, B9 / Ácido Fólico, B12',
+                        positiveResults: [
+                            'Mejora significativa en atención y vigilancia (p = 0.024, d = 0.49) respecto al declive en placebo.',
+                            'Mejora en test CogState (p = 0.027, d = 0.48) frente a declive en placebo.',
+                            'Reducción sostenida de homocisteína sérica e incremento de folato.'
+                        ],
+                        neutralResults: [
+                            'Sin diferencias significativas en PANSS total (p = 0.749).',
+                            'Sin diferencias significativas en compuesto neurocognitivo global (p = 0.785).'
+                        ],
+                        signLevel: 'Nivel Ib',
+                        signGrade: 'Grado A'
+                    },
+                    {
+                        id: 2,
+                        authors: 'Tsiglopoulos et al.',
+                        year: '2024',
+                        pmid: '37700506',
+                        pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/37700506/',
+                        design: 'Cohorte Prospectiva',
+                        sampleN: '37 jóvenes',
+                        sampleDetails: 'Edad media: 19.4±2.4 años, 48.3% varones. Pacientes PEP.',
+                        micronutrient: 'Vitamina D',
+                        micronutrientForm: '25-OH-Vitamina D sérica',
+                        positiveResults: [
+                            'Diferencia significativa en niveles séricos de Vitamina D según estación del año (χ² = 11.7, df = 3, p = 0.008).'
+                        ],
+                        neutralResults: [
+                            '24% deficiencia y 30% insuficiencia (54% subóptimo).',
+                            'Sin asociaciones significativas entre 25(OH)D y sintomatología, cognición o funcionamiento.'
+                        ],
+                        signLevel: 'Nivel II',
+                        signGrade: 'Grado B'
+                    },
+                    {
+                        id: 3,
+                        authors: 'Graham et al.',
+                        year: '2015',
+                        pmid: '24612563',
+                        pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/24612563/',
+                        design: 'Caso-Control',
+                        sampleN: '20 Casos vs 20 Controles',
+                        sampleDetails: 'Edad media: 23.0±3.8 años, 60.0% varones',
+                        micronutrient: 'Vitamina D',
+                        micronutrientForm: '25-OH-Vitamina D sérica',
+                        positiveResults: [
+                            'En casos, niveles bajos asociados a severidad de síntomas negativos (χ² = 4.78, p = 0.03; p ajustado = 0.007).',
+                            'Asociación con mayor severidad total (χ² = 4.52, p = 0.03) y déficit cognitivo (χ² = 9.03, p = 0.003).'
+                        ],
+                        neutralResults: [
+                            'Sin diferencias significativas entre las medias de 25(OH)D sérica entre casos y controles.',
+                            'Sin significación estadística en síntomas positivos (p = 0.15 ajustado).'
+                        ],
+                        signLevel: 'Nivel III',
+                        signGrade: 'Grado C'
+                    },
+                    {
+                        id: 4,
+                        authors: 'Song et al.',
+                        year: '2014',
+                        pmid: '25128453',
+                        pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/25128453/',
+                        design: 'Caso-Control',
+                        sampleN: '46 Casos vs 30 Controles',
+                        sampleDetails: 'Pacientes drug-naïve. Edad: 22.54±5.79 años, 61% varones.',
+                        micronutrient: 'Folato',
+                        micronutrientForm: 'Vitamina B9 sérica',
+                        positiveResults: [
+                            'Niveles de folato sérico significativamente menores en casos vs controles (p < 0.001).',
+                            'Correlación negativa con PANSS total (r = -0.319, p = 0.031) y PANSS síntoma negativo (r = -0.321, p = 0.030).'
+                        ],
+                        neutralResults: [
+                            'Sin correlación significativa con el volumen hipocámpico por Resonancia Magnética.'
+                        ],
+                        signLevel: 'Nivel III',
+                        signGrade: 'Grado C'
+                    },
+                    {
+                        id: 5,
+                        authors: 'Ihln et al.',
+                        year: '2025',
+                        pmid: '40418916',
+                        pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/40418916/',
+                        design: 'Transversal',
+                        sampleN: '46 varones',
+                        sampleDetails: 'Varones jóvenes con PEP. Edad: 20.9±2.3 años.',
+                        micronutrient: 'Vitamina D',
+                        micronutrientForm: '25-OH-Vitamina D sérica',
+                        positiveResults: [
+                            'Correlación positiva con recuerdo diferido de memoria verbal a 30 min (r = 0.378, p = 0.01).',
+                            'Predictor significativo en modelo de regresión con uso de benzodiacepinas (R² = 0.221).'
+                        ],
+                        neutralResults: [
+                            'El modelo multivariable completo con confusores (tabaco, IMC, medicación, PANSS) resultó no significativo (ANOVA F = 1.408, p = 0.214).'
+                        ],
+                        signLevel: 'Nivel III',
+                        signGrade: 'Grado C'
+                    },
+                    {
+                        id: 6,
+                        authors: 'van Mierlo et al.',
+                        year: '2017',
+                        pmid: '28162811',
+                        pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/28162811/',
+                        design: 'Transversal',
+                        sampleN: '215 pacientes',
+                        sampleDetails: '37 ambulatorios, 178 ingresados (63% PEP). Edad: 23.6±5.9 años, 74% varones.',
+                        micronutrient: 'Vitaminas D, B1, B6, B12',
+                        micronutrientForm: 'Perfil sérico vitamínico',
+                        positiveResults: [
+                            '70% prevalencia de déficit de Vitamina D en la muestra.'
+                        ],
+                        neutralResults: [
+                            '25% presentó hipervitaminosis B6 motivada por automedicación no prescrita.',
+                            'Estudio descriptivo de prevalencia sin análisis de correlaciones clínicas.'
+                        ],
+                        signLevel: 'Nivel III',
+                        signGrade: 'Grado C'
+                    }
+                ]);
+
+                // Filter logic
+                const filteredStudies = computed(() => {
+                    return studies.value.filter(s => {
+                        // Nutrient filter
+                        if (filterNutrient.value !== 'ALL') {
+                            if (!s.micronutrient.toLowerCase().includes(filterNutrient.value.toLowerCase())) {
+                                return false;
+                            }
+                        }
+
+                        // SIGN Grade filter
+                        if (filterSign.value !== 'ALL') {
+                            if (s.signGrade !== filterSign.value) {
+                                return false;
+                            }
+                        }
+
+                        // Search Query
+                        if (searchQuery.value.trim() !== '') {
+                            const q = searchQuery.value.toLowerCase();
+                            const matchesAuthor = s.authors.toLowerCase().includes(q);
+                            const matchesPmid = s.pmid.includes(q);
+                            const matchesNutrient = s.micronutrient.toLowerCase().includes(q);
+                            const matchesDesign = s.design.toLowerCase().includes(q);
+                            const matchesPos = s.positiveResults.some(r => r.toLowerCase().includes(q));
+                            const matchesNeu = s.neutralResults.some(r => r.toLowerCase().includes(q));
+
+                            return matchesAuthor || matchesPmid || matchesNutrient || matchesDesign || matchesPos || matchesNeu;
+                        }
+
+                        return true;
+                    });
+                });
+
+                const resetFilters = () => {
+                    searchQuery.value = '';
+                    filterNutrient.value = 'ALL';
+                    filterSign.value = 'ALL';
+                };
+
+                // Format statistical values in bold green
+                const formatResultText = (text) => {
+                    if (!text) return '';
+                    let formatted = text;
+
+                    // P-values
+                    formatted = formatted.replace(/(p\s*[<=]\s*0\.0[0-9]+|p\s*=\s*0\.0[0-9]+|p\s*<\s*0\.001)/gi, '<strong class="text-emerald-800 bg-emerald-100 px-1 py-0.5 rounded font-mono">$1</strong>');
+                    // Effect sizes
+                    formatted = formatted.replace(/(d\s*=\s*\d+\.\d+)/gi, '<strong class="text-petrol-800 font-bold">$1</strong>');
+                    formatted = formatted.replace(/(r\s*=\s*-?\d+\.\d+)/gi, '<strong class="text-petrol-800 font-bold">$1</strong>');
+                    formatted = formatted.replace(/(χ²\s*=\s*\d+\.\d+)/gi, '<strong class="text-slate-900 font-bold">$1</strong>');
+
+                    return formatted;
+                };
+
+                // SIGN Badge class generator
+                const getSignBadgeClass = (grade) => {
+                    switch (grade) {
+                        case 'Grado A':
+                            return 'bg-emerald-100 text-emerald-900 border-emerald-300';
+                        case 'Grado B':
+                            return 'bg-petrol-100 text-petrol-900 border-petrol-300';
+                        case 'Grado C':
+                            return 'bg-slate-100 text-slate-800 border-slate-300';
+                        default:
+                            return 'bg-slate-100 text-slate-800 border-slate-300';
+                    }
+                };
+
+                const submitForm = () => {
+                    submitted.value = true;
+                    setTimeout(() => {
+                        form.value = { name: '', institution: '', email: '', type: '', message: '' };
+                    }, 1000);
+                };
+
+                const reinitLucide = () => {
+                    setTimeout(() => {
+                        if (window.lucide) {
+                            window.lucide.createIcons();
+                        }
+                    }, 50);
+                };
+
+                onMounted(() => {
+                    reinitLucide();
+                });
+
+                updated(() => {
+                    reinitLucide();
+                });
+
+                return {
+                    viewMode,
+                    searchQuery,
+                    filterNutrient,
+                    filterSign,
+                    studies,
+                    filteredStudies,
+                    resetFilters,
+                    formatResultText,
+                    getSignBadgeClass,
+                    form,
+                    submitted,
+                    submitForm
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
