@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Zapf Dingbats'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es" class="scroll-smooth"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Marcadores Nutricionales en PEP Infantojuvenil - XXIX Congreso Nacional de Psiquiatría&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS CDN --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Vue 3 CDN --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/vue@3/dist/vue.global.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Lucide Icons --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/lucide@latest"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Google Fonts Inter --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tailwind.config = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>theme: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>extend: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>colors: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>petrol: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>50: '#f2f8f8',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>100: '#e1eff0',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>200: '#c5e0e2',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>500: '#328289',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>800: '#235e63', // Color Primario Oficial</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>900: '#1c4c50',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>mint: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>300: '#a3ded5',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>400: '#70c1b3', // Color Secundario Oficial</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>500: '#51a99a',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>600: '#3d8c7e',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>gold: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>400: '#e2b974',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>500: '#d4a359', // Acento Oficial</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>600: '#b8853b',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>softbg: '#f4f7f6', // Fondo Tenue Oficial</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>fontFamily: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sans: ['Inter', 'sans-serif'],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f7f6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1e293b;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Gradient header background */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.bg-petrol-gradient {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #1c4c50 0%, #235e63 50%, #2c757c 100%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.gold-border-glow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 15px rgba(212, 163, 89, 0.25);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Custom Scrollbar */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-track {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f4f7f6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-thumb:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #70c1b3;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="min-h-screen antialiased bg-softbg text-slate-800" id="app"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Sticky Navigation Bar --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="sticky top-0 z-50 bg-petrol-900/95 backdrop-blur-md text-white border-b border-petrol-800 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="p-2 bg-mint-400/20 text-mint-400 rounded-lg border border-mint-400/30"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i data-lucide="qr-code" class="w-5 h-5"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs font-semibold text-mint-400 uppercase tracking-wider block"&gt;Recurso Digital Póster&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h1 class="text-xs sm:text-sm font-bold text-white leading-tight"&gt;XXIX Congreso Nacional de Psiquiatría&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Quick Navigation Links --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#resumen" class="hover:text-mint-400 transition"&gt;Resumen y Vacíos&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#evidencia" class="hover:text-mint-400 transition"&gt;Tabla de Evidencia&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#contacto" class="hover:text-mint-400 transition"&gt;Contacto Investigadores&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-[11px] bg-gold-500/20 border border-gold-500/40 text-gold-400 px-2.5 py-1 rounded-full font-mono font-semibold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Sevilla 2026</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Hero / Header Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-petrol-gradient text-white py-10 sm:py-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Decorative subtle pattern overlay --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute inset-0 opacity-10 bg-[radial-gradient(#70c1b3_1px,transparent_1px)] [background-size:16px_16px]"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-5xl mx-auto relative z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-mint-300 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span&gt;XXIX Congreso Nacional de Psiquiatría • Sevilla, 12-14 Noviembre 2026&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Marcadores Nutricionales en el Primer Episodio Psicótico en Niños y Adolescentes: Utilidad en la Práctica Clínica</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Authors &amp; Affiliation --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-6 pt-6 border-t border-white/15 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-mint-300 font-semibold uppercase text-[11px] tracking-wider mb-1"&gt;Equipo Investigador&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="font-medium text-white"&gt;Javier de Otazu Olivares, Nathalia Garrido, Miguel Ruiz-Veguilla y Benedicto Crespo-Facorro&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-mint-300 font-semibold uppercase text-[11px] tracking-wider mb-1"&gt;Filiación Institucional&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="leading-relaxed"&gt;Unidad de Salud Mental, Hospital Universitario Virgen del Rocío / Instituto de Biomedicina de Sevilla (IBiS) / CIBERSAM, Sevilla, España.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Key Quick Metrics Bar --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="block text-2xl font-black text-mint-400"&gt;6&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-[11px] text-slate-200"&gt;Estudios Sistematizados&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="block text-2xl font-black text-gold-400"&gt;Grado A&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-[11px] text-slate-200"&gt;Máxima Evidencia (ECA)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="block text-2xl font-black text-mint-400"&gt;70%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-[11px] text-slate-200"&gt;Déficit de Vitamina D&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="block text-2xl font-black text-rose-300"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-[11px] text-slate-200"&gt;Estudios en Hierro/Minerales&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Main Content Container --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- SECTION A: Executive Summary &amp; Evidence Gap Identification --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="resumen" class="scroll-mt-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-2 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="w-2.5 h-7 bg-petrol-800 rounded-full"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900"&gt;SECCIÓN A: Resumen Ejecutivo e Identificación de Vacíos&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 lg:grid-cols-12 gap-6"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Objective Card (7 cols) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-slate-200/80 flex flex-col justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center gap-2 text-petrol-800 font-bold text-xs uppercase tracking-wider mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="target" class="w-4 h-4 text-mint-500"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Objetivo Principal de la Revisión&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-lg font-bold text-slate-900 mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Evaluación Diagnóstica y Coste-Eficiencia en el Debut Psicótico</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-600 leading-relaxed mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>La evaluación inicial del primer episodio psicótico (PEP) en niños y adolescentes representa una ventana de oportunidad crítica para la intervención precoz. El objetivo de este trabajo es determinar si la evidencia científica disponible justifica la inclusión sistemática de marcadores nutricionales (parámetros de hierro, vitaminas y minerales) en el protocolo diagnóstico inicial, definiendo sus indicaciones clínicas y su coste-eficiencia.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-softbg p-4 rounded-xl border border-slate-200/90 text-xs text-slate-700 flex items-start gap-3 mt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i data-lucide="lightbulb" class="w-5 h-5 text-gold-500 shrink-0 mt-0.5"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;strong&gt;Implicación Clínica:&lt;/strong&gt; Identificar qué biomarcadores nutricionales muestran valor pronóstico o terapéutico real evita pruebas analíticas innecesarias y orienta la suplementación oportuna.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Visual Alert: Evidence Gap Card (5 cols) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="lg:col-span-5 bg-gradient-to-br from-amber-50 to-orange-50/60 rounded-2xl p-6 sm:p-7 shadow-sm border border-amber-200/80 relative overflow-hidden flex flex-col justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center justify-between mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="px-3 py-1 bg-amber-500 text-white rounded-full text-[11px] font-bold tracking-wide uppercase flex items-center gap-1.5 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="alert-triangle" class="w-3.5 h-3.5"&gt;&lt;/i&gt; Alerta Metodológica</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs font-semibold text-amber-800"&gt;Vacío de Evidencia&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-base font-bold text-amber-950 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Ausencia Total de Estudios en Hierro y Minerales</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xs text-amber-900/90 leading-relaxed mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>De las tres categorías teóricas de marcadores evaluadas, la literatura científica en PEP infantojuvenil se encuentra restringida a &lt;strong&gt;Vitaminas&lt;/strong&gt;.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Visual Breakdown Grid --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Vitamins (Evaluated) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-white/80 backdrop-blur-xs p-2.5 rounded-lg border border-emerald-200 flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex items-center gap-2 text-xs font-semibold text-emerald-900"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;Vitaminas (D, B1, B6, B9/Folato, B12)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded"&gt;Evaluado (6 est.)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Iron Parameters (Missing) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-white/80 backdrop-blur-xs p-2.5 rounded-lg border border-rose-200 flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex items-center gap-2 text-xs font-semibold text-rose-950"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="x-circle" class="w-4 h-4 text-rose-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;Hierro (Ferritina, Hierro sérico)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded"&gt;0 Estudios&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Minerals (Missing) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-white/80 backdrop-blur-xs p-2.5 rounded-lg border border-rose-200 flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex items-center gap-2 text-xs font-semibold text-rose-950"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="x-circle" class="w-4 h-4 text-rose-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;Minerales (Zinc, Cu, Ca, P, Mg)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded"&gt;0 Estudios&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-[11px] text-amber-800 italic mt-4 pt-3 border-t border-amber-200/60"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>*Se requieren futuros ensayos clínicos para validar parámetros férricos y mineralogramas en debut psicótico.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- SECTION B: Dynamic Table of Scientific Evidence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="evidencia" class="scroll-mt-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="w-2.5 h-7 bg-petrol-800 rounded-full"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900"&gt;SECCIÓN B: Tabla Dinámica de Evidencia Científica&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xs text-slate-500"&gt;6 estudios sistematizados • Enlaces directos a PubMed&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- View Toggle Buttons --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center bg-slate-200/80 p-1 rounded-xl text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>@click="viewMode = 'table'"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>:class="viewMode === 'table' ? 'bg-white text-petrol-900 shadow-xs font-bold' : 'text-slate-600 font-medium'"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>class="px-3 py-1.5 rounded-lg transition flex items-center gap-1.5"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i data-lucide="table" class="w-3.5 h-3.5"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="hidden sm:inline"&gt;Vista&lt;/span&gt; Tabla</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>@click="viewMode = 'cards'"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>:class="viewMode === 'cards' ? 'bg-white text-petrol-900 shadow-xs font-bold' : 'text-slate-600 font-medium'"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>class="px-3 py-1.5 rounded-lg transition flex items-center gap-1.5"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i data-lucide="layout-grid" class="w-3.5 h-3.5"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="hidden sm:inline"&gt;Vista&lt;/span&gt; Tarjetas</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Filters Bar Card --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200 mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Search Input (5 cols) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="lg:col-span-5 relative"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>type="text"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>v-model="searchQuery"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>placeholder="Buscar autor, prueba (ej. PANSS, CogState), vitamina..."<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>class="w-full pl-10 pr-8 py-2 bg-softbg rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-petrol-800 transition"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button v-if="searchQuery" @click="searchQuery = ''" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span><span class="s1">✕</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Nutrient Filter (3 cols) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="lg:col-span-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;select v-model="filterNutrient" class="w-full bg-softbg rounded-xl border border-slate-200 text-xs py-2 px-3 focus:outline-none focus:ring-2 focus:ring-petrol-800 text-slate-700 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;option value="ALL"&gt;Todos los Nutrientes&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;option value="Vitamina D"&gt;Vitamina D&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;option value="Complejo B"&gt;Complejo B / Folato&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- SIGN Grade Filter (3 cols) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="lg:col-span-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;select v-model="filterSign" class="w-full bg-softbg rounded-xl border border-slate-200 text-xs py-2 px-3 focus:outline-none focus:ring-2 focus:ring-petrol-800 text-slate-700 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;option value="ALL"&gt;Todos los Grados SIGN&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;option value="Grado A"&gt;Grado A (ECA / Evidencia Alta)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;option value="Grado B"&gt;Grado B (Cohortes)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;option value="Grado C"&gt;Grado C (Casos-Control / Transversal)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Reset Button (1 col) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="lg:col-span-1 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button @click="resetFilters" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1" title="Restablecer Filtros"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="rotate-ccw" class="w-3.5 h-3.5"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Active Filters Count Footer --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span&gt;Mostrando &lt;strong&gt;{{ filteredStudies.length }}&lt;/strong&gt; de &lt;strong&gt;{{ studies.length }}&lt;/strong&gt; estudios&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="italic text-[11px] text-slate-400"&gt;* Resaltados p &amp;lt; 0.05 en negrita verde&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- TABLE VIEW --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div v-if="viewMode === 'table'" class="overflow-x-auto bg-white rounded-2xl shadow-sm border border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;table class="w-full text-left border-collapse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr class="bg-petrol-900 text-white text-xs uppercase tracking-wider font-bold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;th class="p-4 w-[18%] border-r border-petrol-800"&gt;Estudio y Referencia&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;th class="p-4 w-[16%] border-r border-petrol-800"&gt;Diseño y Muestra&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;th class="p-4 w-[14%] border-r border-petrol-800"&gt;Micronutriente&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;th class="p-4 w-[38%] border-r border-petrol-800"&gt;Hallazgos Clave y Significación Estadística&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;th class="p-4 w-[14%] text-center"&gt;Nivel / Grado (SIGN)&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tbody class="divide-y divide-slate-200 text-xs text-slate-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>v-for="(study, idx) in filteredStudies"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>:key="study.id"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>:class="idx % 2 === 0 ? 'bg-white' : 'bg-softbg/60'"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>class="hover:bg-mint-300/15 transition-colors"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Col 1: Study &amp; PMID Button --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;td class="p-4 align-top border-r border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="font-bold text-slate-900 text-sm mb-1"&gt;{{ study.authors }}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="text-slate-500 text-[11px] mb-2 font-mono"&gt;{{ study.year }}&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- PubMed Direct Link Button --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;a<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>:href="study.pubmedUrl"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>target="_blank"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;Ver en PubMed&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="external-link" class="w-3 h-3 text-petrol-800"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Col 2: Design &amp; Sample --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;td class="p-4 align-top border-r border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>{{ study.design }}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="font-bold text-slate-900 text-[11px] mb-0.5"&gt;N = {{ study.sampleN }}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-slate-600 leading-tight text-[11px]"&gt;{{ study.sampleDetails }}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Col 3: Micronutrient --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;td class="p-4 align-top border-r border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="font-bold text-petrol-900 text-xs mb-1 flex items-center gap-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="pill" class="w-3.5 h-3.5 text-mint-500"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;{{ study.micronutrient }}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-[10px] text-slate-500 block leading-tight"&gt;{{ study.micronutrientForm }}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Col 4: Key Findings Desaggregated --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;td class="p-4 align-top border-r border-slate-200 space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- Positive/Significant Findings --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div v-if="study.positiveResults.length &gt; 0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>Hallazgos Significativos / Efectos</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;ul class="space-y-1 pl-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li v-for="(pos, pIdx) in study.positiveResults" :key="pIdx" class="text-[11px] leading-snug flex items-start gap-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;span class="text-emerald-600 font-bold"&gt;•&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;span v-html="formatResultText(pos)"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- Neutral/Non-significant Findings --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div v-if="study.neutralResults.length &gt; 0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-[10px] font-bold uppercase text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 inline-block mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>Resultados Neutros / No Significativos</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;ul class="space-y-1 pl-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li v-for="(neu, nIdx) in study.neutralResults" :key="nIdx" class="text-[11px] leading-snug text-slate-600 flex items-start gap-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;span class="text-slate-400 font-bold"&gt;•&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;span v-html="formatResultText(neu)"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Col 5: SIGN Level Badge --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;td class="p-4 align-top text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border shadow-xs"</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>:class="getSignBadgeClass(study.signGrade)"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div&gt;{{ study.signLevel }}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="text-[10px] opacity-90"&gt;({{ study.signGrade }})&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/tr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr v-if="filteredStudies.length === 0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;td colspan="5" class="p-8 text-center text-slate-500 bg-softbg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="search-x" class="w-8 h-8 mx-auto mb-2 text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="font-semibold"&gt;No se encontraron estudios con los filtros seleccionados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;button @click="resetFilters" class="mt-2 text-xs text-petrol-800 underline font-medium"&gt;Restablecer filtros&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- CARDS VIEW (Ideal for Mobile screens) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div v-else class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>v-for="study in filteredStudies"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>:key="study.id"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between space-y-4 hover:border-mint-400 transition"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-start justify-between gap-2 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-base font-bold text-slate-900"&gt;{{ study.authors }} &lt;span class="text-xs font-normal text-slate-500"&gt;({{ study.year }})&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-xs font-semibold text-petrol-800"&gt;{{ study.design }} • N = {{ study.sampleN }}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>class="px-2.5 py-1 rounded-lg text-xs font-black border shrink-0"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>:class="getSignBadgeClass(study.signGrade)"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>{{ study.signLevel }} ({{ study.signGrade }})</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-xs bg-softbg p-2.5 rounded-xl mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="font-bold text-petrol-900 block mb-0.5"&gt;Nutriente: {{ study.micronutrient }}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-[11px] text-slate-500"&gt;{{ study.sampleDetails }}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Results Breakdown --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-2 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div v-if="study.positiveResults.length &gt; 0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded inline-block mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>Hallazgos Significativos</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;ul class="space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li v-for="(pos, pIdx) in study.positiveResults" :key="pIdx" class="text-[11px] leading-snug" v-html="'• ' + formatResultText(pos)"&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div v-if="study.neutralResults.length &gt; 0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-[10px] font-bold uppercase text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded inline-block mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>Resultados Neutros</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;ul class="space-y-1 text-slate-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li v-for="(neu, nIdx) in study.neutralResults" :key="nIdx" class="text-[11px] leading-snug" v-html="'• ' + formatResultText(neu)"&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="pt-3 border-t border-slate-100 flex justify-end"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>:href="study.pubmedUrl"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>target="_blank"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>class="inline-flex items-center gap-1.5 text-xs font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-3 py-1.5 rounded-lg border border-petrol-200 transition"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Ver Artículo en PubMed&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="external-link" class="w-3.5 h-3.5"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- SECTION C: Contact Form &amp; Scientific Feedback --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="contacto" class="scroll-mt-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-2 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="w-2.5 h-7 bg-petrol-800 rounded-full"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900"&gt;SECCIÓN C: Formulario de Contacto y Feedback Científico&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Left Info Side (5 cols) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="lg:col-span-5 bg-petrol-gradient p-6 sm:p-8 text-white flex flex-col justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="px-3 py-1 bg-white/10 rounded-full text-xs font-semibold text-mint-300 border border-white/15"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Atención a Congresistas</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold mt-4 mb-2"&gt;Contacto con el Equipo Investigador&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xs text-slate-200 leading-relaxed mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>¿Tiene dudas sobre la metodología de la revisión, desea sugerir un trabajo colaborativo o solicitar el artículo completo? Envíenos un mensaje directo.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-4 text-xs text-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex items-start gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="p-2 bg-white/10 rounded-lg text-mint-400 shrink-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="building-2" class="w-4 h-4"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold text-white"&gt;Hospital Universitario Virgen del Rocío&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-[11px] text-slate-300"&gt;Unidad de Salud Mental / IBiS / CIBERSAM&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-[11px] text-slate-300"&gt;Sevilla, España&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="p-2 bg-white/10 rounded-lg text-mint-400 shrink-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="mail" class="w-4 h-4"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold text-white"&gt;Correspondencia Científica&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-[11px] text-slate-300"&gt;investigacion.psiquiatria@huvr.es&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mt-8 pt-6 border-t border-white/15 text-[11px] text-mint-300/90"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Presentado en el XXIX Congreso Nacional de Psiquiatría • Sevilla 2026</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Right Form Side (7 cols) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="lg:col-span-7 p-6 sm:p-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;form @submit.prevent="submitForm" class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div v-if="submitted" class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="font-bold"&gt;¡Mensaje enviado con éxito!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-[11px]"&gt;Gracias por su interés. El equipo investigador responderá a la brevedad posible.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="block text-xs font-bold text-slate-700 uppercase mb-1"&gt;Nombre y Apellidos *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>type="text"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>v-model="form.name"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>required<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>placeholder="Ej. Dra. Carmen Ruiz"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="block text-xs font-bold text-slate-700 uppercase mb-1"&gt;Centro Hospitalario / Universidad&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>type="text"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>v-model="form.institution"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>placeholder="Ej. Hospital Clínico San Carlos"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-xs font-bold text-slate-700 uppercase mb-1"&gt;Correo Electrónico de Contacto *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>type="email"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>v-model="form.email"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>required<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>placeholder="ejemplo@hospital.es"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-xs font-bold text-slate-700 uppercase mb-1"&gt;Tipo de Consulta *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;select v-model="form.type" required class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition text-slate-700 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="" disabled&gt;Seleccione el motivo de su mensaje&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="Consulta metodológica"&gt;Consulta metodológica / Selección de artículos&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="Sugerencia de colaboración"&gt;Sugerencia de colaboración científica&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="Pregunta clínica"&gt;Pregunta clínica sobre suplementación&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="Otro"&gt;Otro asunto&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-xs font-bold text-slate-700 uppercase mb-1"&gt;Mensaje o Comentarios *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;textarea<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>v-model="form.message"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>required<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>rows="4"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>placeholder="Escriba aquí sus comentarios o preguntas para los autores del póster..."<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>type="submit"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>class="w-full sm:w-auto px-6 py-3 bg-petrol-800 hover:bg-petrol-900 text-white font-bold text-xs rounded-xl shadow-md transition flex items-center justify-center gap-2"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="send" class="w-4 h-4 text-mint-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span&gt;Enviar mensaje al equipo investigador (HU Virgen del Rocío)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Footer --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-petrol-900 text-white py-8 border-t border-petrol-800 mt-12 text-center text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="font-semibold text-mint-300"&gt;XXIX Congreso Nacional de Psiquiatría • Sevilla, 2026&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-slate-400 text-[11px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Cita de Referencia: de Otazu Olivares J, Garrido N, Ruiz-Veguilla M, Crespo-Facorro B. Marcadores Nutricionales en el Primer Episodio Psicótico en Niños y Adolescentes: Utilidad en la Práctica Clínica. XXIX Congreso Nacional de Psiquiatría; 2026.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-slate-500 text-[10px] pt-2"&gt;Página optimizada para lectura e interacción móvil vía código QR.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Vue 3 App Script --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const { createApp, ref, computed, onMounted, updated } = Vue;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>createApp({</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setup() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const viewMode = ref('table');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const searchQuery = ref('');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const filterNutrient = ref('ALL');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const filterSign = ref('ALL');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const submitted = ref(false);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const form = ref({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: '',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>institution: '',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>email: '',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: '',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>message: ''</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Dataset with 6 systematic review articles</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const studies = ref([</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>id: 1,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>authors: 'Allott et al.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>year: '2019',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pmid: '30771856',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/30771856/',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>design: 'ECA (Ensayo Clínico Aleatorizado)',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleN: '100 analizados',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleDetails: '120 elegibles. Casos: 20.2±3.0 años (65.4% M); Controles: 19.6±2.4 años (70.0% M)',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrient: 'Complejo B',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrientForm: 'B6, B9 / Ácido Fólico, B12',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>positiveResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Mejora significativa en atención y vigilancia (p = 0.024, d = 0.49) respecto al declive en placebo.',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Mejora en test CogState (p = 0.027, d = 0.48) frente a declive en placebo.',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Reducción sostenida de homocisteína sérica e incremento de folato.'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>neutralResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Sin diferencias significativas en PANSS total (p = 0.749).',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Sin diferencias significativas en compuesto neurocognitivo global (p = 0.785).'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signLevel: 'Nivel Ib',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signGrade: 'Grado A'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>id: 2,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>authors: 'Tsiglopoulos et al.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>year: '2024',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pmid: '37700506',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/37700506/',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>design: 'Cohorte Prospectiva',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleN: '37 jóvenes',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleDetails: 'Edad media: 19.4±2.4 años, 48.3% varones. Pacientes PEP.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrient: 'Vitamina D',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrientForm: '25-OH-Vitamina D sérica',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>positiveResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Diferencia significativa en niveles séricos de Vitamina D según estación del año (χ² = 11.7, df = 3, p = 0.008).'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>neutralResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'24% deficiencia y 30% insuficiencia (54% subóptimo).',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Sin asociaciones significativas entre 25(OH)D y sintomatología, cognición o funcionamiento.'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signLevel: 'Nivel II',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signGrade: 'Grado B'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>id: 3,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>authors: 'Graham et al.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>year: '2015',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pmid: '24612563',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/24612563/',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>design: 'Caso-Control',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleN: '20 Casos vs 20 Controles',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleDetails: 'Edad media: 23.0±3.8 años, 60.0% varones',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrient: 'Vitamina D',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrientForm: '25-OH-Vitamina D sérica',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>positiveResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'En casos, niveles bajos asociados a severidad de síntomas negativos (χ² = 4.78, p = 0.03; p ajustado = 0.007).',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Asociación con mayor severidad total (χ² = 4.52, p = 0.03) y déficit cognitivo (χ² = 9.03, p = 0.003).'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>neutralResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Sin diferencias significativas entre las medias de 25(OH)D sérica entre casos y controles.',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Sin significación estadística en síntomas positivos (p = 0.15 ajustado).'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signLevel: 'Nivel III',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signGrade: 'Grado C'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>id: 4,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>authors: 'Song et al.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>year: '2014',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pmid: '25128453',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/25128453/',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>design: 'Caso-Control',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleN: '46 Casos vs 30 Controles',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleDetails: 'Pacientes drug-naïve. Edad: 22.54±5.79 años, 61% varones.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrient: 'Folato',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrientForm: 'Vitamina B9 sérica',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>positiveResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Niveles de folato sérico significativamente menores en casos vs controles (p &lt; 0.001).',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Correlación negativa con PANSS total (r = -0.319, p = 0.031) y PANSS síntoma negativo (r = -0.321, p = 0.030).'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>neutralResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Sin correlación significativa con el volumen hipocámpico por Resonancia Magnética.'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signLevel: 'Nivel III',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signGrade: 'Grado C'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>id: 5,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>authors: 'Ihln et al.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>year: '2025',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pmid: '40418916',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/40418916/',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>design: 'Transversal',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleN: '46 varones',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleDetails: 'Varones jóvenes con PEP. Edad: 20.9±2.3 años.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrient: 'Vitamina D',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrientForm: '25-OH-Vitamina D sérica',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>positiveResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Correlación positiva con recuerdo diferido de memoria verbal a 30 min (r = 0.378, p = 0.01).',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Predictor significativo en modelo de regresión con uso de benzodiacepinas (R² = 0.221).'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>neutralResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'El modelo multivariable completo con confusores (tabaco, IMC, medicación, PANSS) resultó no significativo (ANOVA F = 1.408, p = 0.214).'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signLevel: 'Nivel III',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signGrade: 'Grado C'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>id: 6,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>authors: 'van Mierlo et al.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>year: '2017',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pmid: '28162811',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>pubmedUrl: 'https://pubmed.ncbi.nlm.nih.gov/28162811/',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>design: 'Transversal',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleN: '215 pacientes',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleDetails: '37 ambulatorios, 178 ingresados (63% PEP). Edad: 23.6±5.9 años, 74% varones.',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrient: 'Vitaminas D, B1, B6, B12',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>micronutrientForm: 'Perfil sérico vitamínico',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>positiveResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'70% prevalencia de déficit de Vitamina D en la muestra.'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>neutralResults: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'25% presentó hipervitaminosis B6 motivada por automedicación no prescrita.',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>'Estudio descriptivo de prevalencia sin análisis de correlaciones clínicas.'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signLevel: 'Nivel III',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>signGrade: 'Grado C'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Filter logic</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const filteredStudies = computed(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return studies.value.filter(s =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// Nutrient filter</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (filterNutrient.value !== 'ALL') {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (!s.micronutrient.toLowerCase().includes(filterNutrient.value.toLowerCase())) {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>return false;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// SIGN Grade filter</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (filterSign.value !== 'ALL') {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (s.signGrade !== filterSign.value) {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>return false;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// Search Query</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (searchQuery.value.trim() !== '') {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const q = searchQuery.value.toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const matchesAuthor = s.authors.toLowerCase().includes(q);</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const matchesPmid = s.pmid.includes(q);</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const matchesNutrient = s.micronutrient.toLowerCase().includes(q);</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const matchesDesign = s.design.toLowerCase().includes(q);</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const matchesPos = s.positiveResults.some(r =&gt; r.toLowerCase().includes(q));</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const matchesNeu = s.neutralResults.some(r =&gt; r.toLowerCase().includes(q));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return matchesAuthor || matchesPmid || matchesNutrient || matchesDesign || matchesPos || matchesNeu;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return true;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const resetFilters = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>searchQuery.value = '';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>filterNutrient.value = 'ALL';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>filterSign.value = 'ALL';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Format statistical values in bold green</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const formatResultText = (text) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (!text) return '';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>let formatted = text;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// P-values</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>formatted = formatted.replace(/(p\s*[&lt;=]\s*0\.0[0-9]+|p\s*=\s*0\.0[0-9]+|p\s*&lt;\s*0\.001)/gi, '&lt;strong class="text-emerald-800 bg-emerald-100 px-1 py-0.5 rounded font-mono"&gt;$1&lt;/strong&gt;');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Effect sizes</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>formatted = formatted.replace(/(d\s*=\s*\d+\.\d+)/gi, '&lt;strong class="text-petrol-800 font-bold"&gt;$1&lt;/strong&gt;');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>formatted = formatted.replace(/(r\s*=\s*-?\d+\.\d+)/gi, '&lt;strong class="text-petrol-800 font-bold"&gt;$1&lt;/strong&gt;');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>formatted = formatted.replace(/(χ²\s*=\s*\d+\.\d+)/gi, '&lt;strong class="text-slate-900 font-bold"&gt;$1&lt;/strong&gt;');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return formatted;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// SIGN Badge class generator</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const getSignBadgeClass = (grade) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>switch (grade) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>case 'Grado A':</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return 'bg-emerald-100 text-emerald-900 border-emerald-300';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>case 'Grado B':</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return 'bg-petrol-100 text-petrol-900 border-petrol-300';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>case 'Grado C':</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return 'bg-slate-100 text-slate-800 border-slate-300';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>default:</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return 'bg-slate-100 text-slate-800 border-slate-300';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const submitForm = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>submitted.value = true;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>form.value = { name: '', institution: '', email: '', type: '', message: '' };</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const reinitLucide = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (window.lucide) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>window.lucide.createIcons();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}, 50);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>onMounted(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>reinitLucide();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>updated(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>reinitLucide();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>viewMode,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>searchQuery,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>filterNutrient,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>filterSign,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>studies,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>filteredStudies,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resetFilters,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>formatResultText,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>getSignBadgeClass,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>form,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>submitted,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>submitForm</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).mount('#app');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
