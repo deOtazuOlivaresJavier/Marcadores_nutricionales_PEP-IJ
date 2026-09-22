@@ -129,6 +129,7 @@
     </style>
 </head>
 <body class="min-h-screen text-slate-800 bg-slate-100">
+{% raw %}
     <div id="app">
         <div :class="currentThemeClass" class="min-h-screen pb-12 transition-colors duration-300">
 
@@ -509,6 +510,7 @@
             </div>
         </div>
     </div>
+{% endraw %}
 
     <script>
         const { createApp, ref, computed, onMounted, updated } = Vue;
