@@ -58,10 +58,10 @@
         }
     </style>
 </head>
-<body class="min-h-screen antialiased bg-softbg text-slate-800">
+<body class="min-h-screen antialiased bg-softbg text-slate-800 flex flex-col justify-between">
 
     <!-- Navegación Superior -->
-    <nav class="sticky top-0 z-50 bg-petrol-900/95 backdrop-blur-md text-white border-b border-petrol-800 shadow-md">
+    <nav class="bg-petrol-900 text-white border-b border-petrol-800 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <span class="p-2 bg-mint-400/20 text-mint-400 rounded-lg border border-mint-400/30">
@@ -73,12 +73,6 @@
                 </div>
             </div>
 
-            <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-200">
-                <a href="#resumen" class="hover:text-mint-400 transition">Resumen y Vacíos</a>
-                <a href="#evidencia" class="hover:text-mint-400 transition">Tabla de Evidencia</a>
-                <a href="#contacto" class="hover:text-mint-400 transition">Contacto Investigadores</a>
-            </div>
-
             <div class="flex items-center gap-2">
                 <span class="text-[11px] bg-gold-500/20 border border-gold-500/40 text-gold-400 px-2.5 py-1 rounded-full font-mono font-semibold">
                     Sevilla 2026
@@ -87,500 +81,57 @@
         </div>
     </nav>
 
-    <!-- Encabezado Principal -->
-    <header class="bg-petrol-gradient text-white py-10 sm:py-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div class="max-w-5xl mx-auto relative z-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-mint-300 mb-4">
+    <!-- Encabezado e Información de Autoría -->
+    <header class="bg-petrol-gradient text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-mint-300 mb-6">
                 <i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"></i>
                 <span>XXIX Congreso Nacional de Psiquiatría • Sevilla, 12-14 Noviembre 2026</span>
             </div>
 
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight mb-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight mb-6">
                 Marcadores Nutricionales en el Primer Episodio Psicótico en Niños y Adolescentes: Utilidad en la Práctica Clínica
             </h1>
 
-            <div class="mt-6 pt-6 border-t border-white/15 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-200">
-                <div>
-                    <p class="text-mint-300 font-semibold uppercase text-[11px] tracking-wider mb-1">Equipo Investigador</p>
-                    <p class="font-medium text-white">Javier de Otazu Olivares, Nathalia Garrido, Miguel Ruiz-Veguilla y Benedicto Crespo-Facorro</p>
-                </div>
-                <div>
-                    <p class="text-mint-300 font-semibold uppercase text-[11px] tracking-wider mb-1">Filiación Institucional</p>
-                    <p class="leading-relaxed">Unidad de Salud Mental, Hospital Universitario Virgen del Rocío / Instituto de Biomedicina de Sevilla (IBiS) / CIBERSAM, Sevilla, España.</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                    <span class="block text-2xl font-black text-mint-400">6</span>
-                    <span class="text-[11px] text-slate-200">Estudios Sistematizados</span>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                    <span class="block text-2xl font-black text-gold-400">Grado A</span>
-                    <span class="text-[11px] text-slate-200">Máxima Evidencia (ECA)</span>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                    <span class="block text-2xl font-black text-mint-400">70%</span>
-                    <span class="text-[11px] text-slate-200">Déficit de Vitamina D</span>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                    <span class="block text-2xl font-black text-rose-300">0</span>
-                    <span class="text-[11px] text-slate-200">Estudios en Hierro/Minerales</span>
-                </div>
+            <div class="pt-6 border-t border-white/15 max-w-2xl mx-auto text-xs sm:text-sm text-slate-200 space-y-2">
+                <p class="font-medium text-white text-base">Javier de Otazu Olivares, Nathalia Garrido, Miguel Ruiz-Veguilla y Benedicto Crespo-Facorro</p>
+                <p class="text-mint-300 text-xs leading-relaxed">Unidad de Salud Mental, Hospital Universitario Virgen del Rocío / Instituto de Biomedicina de Sevilla (IBiS) / CIBERSAM, Sevilla, España.</p>
             </div>
         </div>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
-
-        <!-- SECCIÓN A -->
-        <section id="resumen" class="scroll-mt-20">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="w-2.5 h-7 bg-petrol-800 rounded-full"></span>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900">SECCIÓN A: Resumen Ejecutivo e Identificación de Vacíos</h2>
+    <!-- Mensaje de Disponibilidad Próxima -->
+    <main class="max-w-3xl mx-auto px-4 py-12 w-full my-auto">
+        <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-slate-200/80 text-center space-y-6 relative overflow-hidden">
+            
+            <div class="w-16 h-16 bg-mint-400/15 text-petrol-800 rounded-2xl border border-mint-400/30 flex items-center justify-center mx-auto">
+                <i data-lucide="clock" class="w-8 h-8 text-petrol-800"></i>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-slate-200/80 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-petrol-800 font-bold text-xs uppercase tracking-wider mb-2">
-                            <i data-lucide="target" class="w-4 h-4 text-mint-500"></i>
-                            <span>Objetivo Principal de la Revisión</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">
-                            Evaluación Diagnóstica y Coste-Eficiencia en el Debut Psicótico
-                        </h3>
-                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                            La evaluación inicial del primer episodio psicótico (PEP) en niños y adolescentes representa una ventana de oportunidad crítica para la intervención precoz. El objetivo de este trabajo es determinar si la evidencia científica disponible justifica la inclusión sistemática de marcadores nutricionales (parámetros de hierro, vitaminas y minerales) en el protocolo diagnóstico inicial, definiendo sus indicaciones clínicas y su coste-eficiencia.
-                        </p>
-                    </div>
-
-                    <div class="bg-softbg p-4 rounded-xl border border-slate-200/90 text-xs text-slate-700 flex items-start gap-3 mt-2">
-                        <i data-lucide="lightbulb" class="w-5 h-5 text-gold-500 shrink-0 mt-0.5"></i>
-                        <p>
-                            <strong>Implicación Clínica:</strong> Identificar qué biomarcadores nutricionales muestran valor pronóstico o terapéutico real evita pruebas analíticas innecesarias y orienta la suplementación oportuna.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-5 bg-gradient-to-br from-amber-50 to-orange-50/60 rounded-2xl p-6 sm:p-7 shadow-sm border border-amber-200/80 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="px-3 py-1 bg-amber-500 text-white rounded-full text-[11px] font-bold tracking-wide uppercase flex items-center gap-1.5 shadow-xs">
-                                <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> Alerta Metodológica
-                            </span>
-                            <span class="text-xs font-semibold text-amber-800">Vacío de Evidencia</span>
-                        </div>
-
-                        <h3 class="text-base font-bold text-amber-950 mb-2">
-                            Ausencia Total de Estudios en Hierro y Minerales
-                        </h3>
-
-                        <p class="text-xs text-amber-900/90 leading-relaxed mb-4">
-                            De las tres categorías teóricas de marcadores evaluadas, la literatura científica en PEP infantojuvenil se encuentra restringida a <strong>Vitaminas</strong>.
-                        </p>
-
-                        <div class="space-y-2">
-                            <div class="bg-white/80 p-2.5 rounded-lg border border-emerald-200 flex items-center justify-between">
-                                <div class="flex items-center gap-2 text-xs font-semibold text-emerald-900">
-                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
-                                    <span>Vitaminas (D, B1, B6, B9/Folato, B12)</span>
-                                </div>
-                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Evaluado (6 est.)</span>
-                            </div>
-
-                            <div class="bg-white/80 p-2.5 rounded-lg border border-rose-200 flex items-center justify-between">
-                                <div class="flex items-center gap-2 text-xs font-semibold text-rose-950">
-                                    <i data-lucide="x-circle" class="w-4 h-4 text-rose-600"></i>
-                                    <span>Hierro (Ferritina, Hierro sérico)</span>
-                                </div>
-                                <span class="text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded">0 Estudios</span>
-                            </div>
-
-                            <div class="bg-white/80 p-2.5 rounded-lg border border-rose-200 flex items-center justify-between">
-                                <div class="flex items-center gap-2 text-xs font-semibold text-rose-950">
-                                    <i data-lucide="x-circle" class="w-4 h-4 text-rose-600"></i>
-                                    <span>Minerales (Zinc, Cu, Ca, P, Mg)</span>
-                                </div>
-                                <span class="text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded">0 Estudios</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="text-[11px] text-amber-800 italic mt-4 pt-3 border-t border-amber-200/60">
-                        *Se requieren futuros ensayos clínicos para validar parámetros férricos y mineralogramas en debut psicótico.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN B -->
-        <section id="evidencia" class="scroll-mt-20">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-7 bg-petrol-800 rounded-full"></span>
-                    <div>
-                        <h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900">SECCIÓN B: Tabla de Evidencia Científica</h2>
-                        <p class="text-xs text-slate-500">6 estudios sistematizados • Enlaces directos a PubMed</p>
-                    </div>
-                </div>
+            <div class="space-y-2">
+                <span class="px-3 py-1 bg-gold-500/15 text-gold-600 rounded-full text-xs font-bold uppercase tracking-wider border border-gold-500/30 inline-block">
+                    Acceso Restringido Temporariamente
+                </span>
+                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+                    Visualización Disponible el Día del Congreso
+                </h2>
             </div>
 
-            <!-- Buscador y Filtros en Tiempo Real -->
-            <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200 mb-6">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3">
-                    <div class="lg:col-span-6 relative">
-                        <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                        <input id="search-input" type="text" onkeyup="filterTable()" placeholder="Buscar por autor, prueba (PANSS, CogState), vitamina..." class="w-full pl-10 pr-8 py-2 bg-softbg rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-petrol-800 transition" />
-                    </div>
+            <p class="text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
+                La versión interactiva completa de este recurso digital —incluyendo la síntesis de evidencia sistematizada, tablas dinámicas de estudios y formulario de contacto científico— estará totalmente accesible durante la celebración del congreso.
+            </p>
 
-                    <div class="lg:col-span-5">
-                        <select id="filter-nutrient" onchange="filterTable()" class="w-full bg-softbg rounded-xl border border-slate-200 text-xs py-2 px-3 focus:outline-none focus:ring-2 focus:ring-petrol-800 text-slate-700 font-medium">
-                            <option value="ALL">Todos los Nutrientes</option>
-                            <option value="Vitamina D">Vitamina D</option>
-                            <option value="Complejo B">Complejo B / Folato</option>
-                        </select>
-                    </div>
-
-                    <div class="lg:col-span-1 flex items-center">
-                        <button onclick="resetFilters()" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1" title="Restablecer Filtros">
-                            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="p-4 bg-softbg rounded-2xl border border-slate-200 text-xs text-slate-500 flex items-center justify-center gap-2 max-w-md mx-auto">
+                <i data-lucide="calendar" class="w-4 h-4 text-petrol-800 shrink-0"></i>
+                <span>Apertura oficial: <strong>Noviembre de 2026</strong></span>
             </div>
 
-            <!-- TABLA DE ESTUDIOS -->
-            <div class="overflow-x-auto bg-white rounded-2xl shadow-sm border border-slate-200">
-                <table class="w-full text-left border-collapse" id="studies-table">
-                    <thead>
-                        <tr class="bg-petrol-900 text-white text-xs uppercase tracking-wider font-bold">
-                            <th class="p-4 w-[18%] border-r border-petrol-800">Estudio y Referencia</th>
-                            <th class="p-4 w-[16%] border-r border-petrol-800">Diseño y Muestra</th>
-                            <th class="p-4 w-[14%] border-r border-petrol-800">Micronutriente</th>
-                            <th class="p-4 w-[38%] border-r border-petrol-800">Hallazgos Clave y Significación Estadística</th>
-                            <th class="p-4 w-[14%] text-center">Nivel / Grado (SIGN)</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-200 text-xs text-slate-700">
-                        
-                        <!-- Estudio 1 -->
-                        <tr class="study-row bg-white hover:bg-mint-300/15 transition-colors" data-nutrient="Complejo B">
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-slate-900 text-sm mb-1">Allott et al.</div>
-                                <div class="text-slate-500 text-[11px] mb-2 font-mono">2019</div>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/30771856/" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition">
-                                    <span>PubMed</span>
-                                    <i data-lucide="external-link" class="w-3 h-3 text-petrol-800"></i>
-                                </a>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800">ECA</span>
-                                <p class="font-bold text-slate-900 text-[11px] mb-0.5">N = 100 analizados</p>
-                                <p class="text-slate-600 leading-tight text-[11px]">120 elegibles. Casos: 20.2±3.0 años; Controles: 19.6±2.4 años</p>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-petrol-900 text-xs mb-1">Complejo B</div>
-                                <span class="text-[10px] text-slate-500 block leading-tight">B6, B9 / Ácido Fólico, B12</span>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200 space-y-2">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1">Significativos</span>
-                                    <ul class="space-y-1 pl-2 text-[11px]">
-                                        <li>• Mejora en atención y vigilancia (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">p = 0.024</strong>, d = 0.49).</li>
-                                        <li>• Mejora en test CogState (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">p = 0.027</strong>, d = 0.48).</li>
-                                        <li>• Reducción de homocisteína e incremento de folato.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 inline-block mb-1">Neutros</span>
-                                    <p class="text-[11px] text-slate-600 pl-2">• Sin diferencias significativas en PANSS total (p = 0.749).</p>
-                                </div>
-                            </td>
-                            <td class="p-4 align-top text-center">
-                                <div class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border bg-emerald-100 text-emerald-900 border-emerald-300">
-                                    <div>Nivel Ib</div>
-                                    <div class="text-[10px] opacity-90">(Grado A)</div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <!-- Estudio 2 -->
-                        <tr class="study-row bg-softbg/60 hover:bg-mint-300/15 transition-colors" data-nutrient="Vitamina D">
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-slate-900 text-sm mb-1">Tsiglopoulos et al.</div>
-                                <div class="text-slate-500 text-[11px] mb-2 font-mono">2024</div>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/37700506/" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition">
-                                    <span>PubMed</span>
-                                    <i data-lucide="external-link" class="w-3 h-3 text-petrol-800"></i>
-                                </a>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800">Cohorte Prospectiva</span>
-                                <p class="font-bold text-slate-900 text-[11px] mb-0.5">N = 37 jóvenes</p>
-                                <p class="text-slate-600 leading-tight text-[11px]">Edad media: 19.4±2.4 años, Pacientes PEP.</p>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-petrol-900 text-xs mb-1">Vitamina D</div>
-                                <span class="text-[10px] text-slate-500 block leading-tight">25-OH-Vitamina D sérica</span>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200 space-y-2">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1">Significativos</span>
-                                    <p class="text-[11px] pl-2">• Diferencia estacional en niveles de Vit D (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">p = 0.008</strong>).</p>
-                                </div>
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 inline-block mb-1">Neutros</span>
-                                    <p class="text-[11px] text-slate-600 pl-2">• 54% subóptimo (24% deficiencia, 30% insuficiencia). Sin asociación directa con PANSS.</p>
-                                </div>
-                            </td>
-                            <td class="p-4 align-top text-center">
-                                <div class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border bg-petrol-100 text-petrol-900 border-petrol-300">
-                                    <div>Nivel II</div>
-                                    <div class="text-[10px] opacity-90">(Grado B)</div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <!-- Estudio 3 -->
-                        <tr class="study-row bg-white hover:bg-mint-300/15 transition-colors" data-nutrient="Vitamina D">
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-slate-900 text-sm mb-1">Graham et al.</div>
-                                <div class="text-slate-500 text-[11px] mb-2 font-mono">2015</div>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/24612563/" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition">
-                                    <span>PubMed</span>
-                                    <i data-lucide="external-link" class="w-3 h-3 text-petrol-800"></i>
-                                </a>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800">Caso-Control</span>
-                                <p class="font-bold text-slate-900 text-[11px] mb-0.5">20 Casos vs 20 Controles</p>
-                                <p class="text-slate-600 leading-tight text-[11px]">Edad media: 23.0±3.8 años, 60.0% varones</p>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-petrol-900 text-xs mb-1">Vitamina D</div>
-                                <span class="text-[10px] text-slate-500 block leading-tight">25-OH-Vitamina D sérica</span>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200 space-y-2">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1">Significativos</span>
-                                    <ul class="space-y-1 pl-2 text-[11px]">
-                                        <li>• Niveles bajos asociados a síntomas negativos (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">p = 0.007 ajustado</strong>).</li>
-                                        <li>• Mayor severidad total y déficit cognitivo (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">p = 0.003</strong>).</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td class="p-4 align-top text-center">
-                                <div class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border bg-slate-100 text-slate-800 border-slate-300">
-                                    <div>Nivel III</div>
-                                    <div class="text-[10px] opacity-90">(Grado C)</div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <!-- Estudio 4 -->
-                        <tr class="study-row bg-softbg/60 hover:bg-mint-300/15 transition-colors" data-nutrient="Complejo B">
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-slate-900 text-sm mb-1">Song et al.</div>
-                                <div class="text-slate-500 text-[11px] mb-2 font-mono">2014</div>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/25128453/" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition">
-                                    <span>PubMed</span>
-                                    <i data-lucide="external-link" class="w-3 h-3 text-petrol-800"></i>
-                                </a>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800">Caso-Control</span>
-                                <p class="font-bold text-slate-900 text-[11px] mb-0.5">46 Casos vs 30 Controles</p>
-                                <p class="text-slate-600 leading-tight text-[11px]">Pacientes drug-naïve. Edad: 22.5±5.7 años.</p>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-petrol-900 text-xs mb-1">Complejo B</div>
-                                <span class="text-[10px] text-slate-500 block leading-tight">Folato (Vitamina B9)</span>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200 space-y-2">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1">Significativos</span>
-                                    <ul class="space-y-1 pl-2 text-[11px]">
-                                        <li>• Folato menor en casos vs controles (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">p &lt; 0.001</strong>).</li>
-                                        <li>• Correlación negativa con PANSS total (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">p = 0.031</strong>).</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td class="p-4 align-top text-center">
-                                <div class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border bg-slate-100 text-slate-800 border-slate-300">
-                                    <div>Nivel III</div>
-                                    <div class="text-[10px] opacity-90">(Grado C)</div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <!-- Estudio 5 -->
-                        <tr class="study-row bg-white hover:bg-mint-300/15 transition-colors" data-nutrient="Vitamina D">
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-slate-900 text-sm mb-1">Ihln et al.</div>
-                                <div class="text-slate-500 text-[11px] mb-2 font-mono">2025</div>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/40418916/" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition">
-                                    <span>PubMed</span>
-                                    <i data-lucide="external-link" class="w-3 h-3 text-petrol-800"></i>
-                                </a>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800">Transversal</span>
-                                <p class="font-bold text-slate-900 text-[11px] mb-0.5">N = 46 varones</p>
-                                <p class="text-slate-600 leading-tight text-[11px]">Varones jóvenes con PEP. Edad: 20.9±2.3 años.</p>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-petrol-900 text-xs mb-1">Vitamina D</div>
-                                <span class="text-[10px] text-slate-500 block leading-tight">25-OH-Vitamina D sérica</span>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200 space-y-2">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1">Significativos</span>
-                                    <p class="text-[11px] pl-2">• Correlación positiva con memoria verbal a 30 min (<strong class="text-emerald-800 bg-emerald-100 px-1 rounded">r = 0.378, p = 0.01</strong>).</p>
-                                </div>
-                            </td>
-                            <td class="p-4 align-top text-center">
-                                <div class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border bg-slate-100 text-slate-800 border-slate-300">
-                                    <div>Nivel III</div>
-                                    <div class="text-[10px] opacity-90">(Grado C)</div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <!-- Estudio 6 -->
-                        <tr class="study-row bg-softbg/60 hover:bg-mint-300/15 transition-colors" data-nutrient="Vitamina D Complejo B">
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-slate-900 text-sm mb-1">van Mierlo et al.</div>
-                                <div class="text-slate-500 text-[11px] mb-2 font-mono">2017</div>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/28162811/" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-petrol-800 bg-petrol-50 hover:bg-petrol-100 px-2.5 py-1 rounded-lg border border-petrol-200 transition">
-                                    <span>PubMed</span>
-                                    <i data-lucide="external-link" class="w-3 h-3 text-petrol-800"></i>
-                                </a>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <span class="inline-block px-2 py-0.5 mb-1.5 text-[10px] font-bold rounded uppercase bg-slate-200 text-slate-800">Transversal</span>
-                                <p class="font-bold text-slate-900 text-[11px] mb-0.5">N = 215 pacientes</p>
-                                <p class="text-slate-600 leading-tight text-[11px]">63% PEP. Edad: 23.6±5.9 años, 74% varones.</p>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200">
-                                <div class="font-bold text-petrol-900 text-xs mb-1">Vitamina D, B1, B6, B12</div>
-                                <span class="text-[10px] text-slate-500 block leading-tight">Perfil sérico vitamínico</span>
-                            </td>
-                            <td class="p-4 align-top border-r border-slate-200 space-y-2">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 inline-block mb-1">Prevalencia</span>
-                                    <p class="text-[11px] pl-2">• <strong class="text-emerald-800 bg-emerald-100 px-1 rounded">70% prevalencia</strong> de déficit de Vitamina D en la muestra.</p>
-                                </div>
-                            </td>
-                            <td class="p-4 align-top text-center">
-                                <div class="inline-block px-3 py-1.5 rounded-xl text-xs font-black border bg-slate-100 text-slate-800 border-slate-300">
-                                    <div>Nivel III</div>
-                                    <div class="text-[10px] opacity-90">(Grado C)</div>
-                                </div>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- SECCIÓN C -->
-        <section id="contacto" class="scroll-mt-20">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="w-2.5 h-7 bg-petrol-800 rounded-full"></span>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-petrol-900">SECCIÓN C: Formulario de Contacto y Feedback Científico</h2>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-                <div class="lg:col-span-5 bg-petrol-gradient p-6 sm:p-8 text-white flex flex-col justify-between">
-                    <div>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-xs font-semibold text-mint-300 border border-white/15">
-                            Atención a Congresistas
-                        </span>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Contacto con el Equipo Investigador</h3>
-                        <p class="text-xs text-slate-200 leading-relaxed mb-6">
-                            ¿Tiene dudas sobre la metodología de la revisión, desea sugerir un trabajo colaborativo o solicitar el artículo completo? Envíenos un mensaje directo.
-                        </p>
-
-                        <div class="space-y-4 text-xs text-slate-200">
-                            <div class="flex items-start gap-3">
-                                <div class="p-2 bg-white/10 rounded-lg text-mint-400 shrink-0">
-                                    <i data-lucide="building-2" class="w-4 h-4"></i>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-white">Hospital Universitario Virgen del Rocío</p>
-                                    <p class="text-[11px] text-slate-300">Unidad de Salud Mental / IBiS / CIBERSAM</p>
-                                    <p class="text-[11px] text-slate-300">Sevilla, España</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center gap-3">
-                                <div class="p-2 bg-white/10 rounded-lg text-mint-400 shrink-0">
-                                    <i data-lucide="mail" class="w-4 h-4"></i>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-white">Correspondencia Científica</p>
-                                    <p class="text-[11px] text-slate-300">investigacion.psiquiatria@huvr.es</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8 pt-6 border-t border-white/15 text-[11px] text-mint-300/90">
-                        Presentado en el XXIX Congreso Nacional de Psiquiatría • Sevilla 2026
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 p-6 sm:p-8">
-                    <form id="contact-form" onsubmit="handleContact(event)" class="space-y-4">
-                        <div id="form-success" class="hidden p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs flex items-center gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0"></i>
-                            <div>
-                                <p class="font-bold">¡Mensaje enviado con éxito!</p>
-                                <p class="text-[11px]">Gracias por su interés. El equipo responderá a la brevedad posible.</p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre y Apellidos *</label>
-                                <input type="text" required placeholder="Ej. Dra. Carmen Ruiz" class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition" />
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Centro Hospitalario / Universidad</label>
-                                <input type="text" placeholder="Ej. Hospital Cĺínico San Carlos" class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition" />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico *</label>
-                            <input type="email" required placeholder="ejemplo@hospital.es" class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition" />
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mensaje *</label>
-                            <textarea required rows="4" placeholder="Escriba aquí sus preguntas..." class="w-full px-3.5 py-2.5 bg-softbg border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-petrol-800 focus:outline-none transition"></textarea>
-                        </div>
-
-                        <div class="pt-2">
-                            <button type="submit" class="w-full sm:w-auto px-6 py-3 bg-petrol-800 hover:bg-petrol-900 text-white font-bold text-xs rounded-xl shadow-md transition flex items-center justify-center gap-2">
-                                <i data-lucide="send" class="w-4 h-4 text-mint-400"></i>
-                                <span>Enviar mensaje</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
+        </div>
     </main>
 
     <!-- Pie de página -->
-    <footer class="bg-petrol-900 text-white py-8 border-t border-petrol-800 mt-12 text-center text-xs">
-        <div class="max-w-7xl mx-auto px-4 space-y-2">
+    <footer class="bg-petrol-900 text-white py-6 border-t border-petrol-800 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-4 space-y-1">
             <p class="font-semibold text-mint-300">XXIX Congreso Nacional de Psiquiatría • Sevilla, 2026</p>
             <p class="text-slate-400 text-[11px]">
                 Cita: de Otazu Olivares J, Garrido N, Ruiz-Veguilla M, Crespo-Facorro B. Marcadores Nutricionales en el Primer Episodio Psicótico en Niños y Adolescentes: Utilidad en la Práctica Clínica. XXIX Congreso Nacional de Psiquiatría; 2026.
@@ -588,48 +139,12 @@
         </div>
     </footer>
 
-    <!-- Scripts ligeros -->
     <script>
-        // Inicializar iconos
         document.addEventListener('DOMContentLoaded', function() {
             if (window.lucide) {
                 lucide.createIcons();
             }
         });
-
-        // Filtrar tabla dinámicamente
-        function filterTable() {
-            var search = document.getElementById('search-input').value.toLowerCase();
-            var select = document.getElementById('filter-nutrient').value.toLowerCase();
-            var rows = document.getElementsByClassName('study-row');
-
-            for (var i = 0; i < rows.length; i++) {
-                var row = rows[i];
-                var text = row.innerText.toLowerCase();
-                var nutrient = row.getAttribute('data-nutrient').toLowerCase();
-
-                var matchesSearch = text.indexOf(search) > -1;
-                var matchesNutrient = (select === 'all') || (nutrient.indexOf(select) > -1);
-
-                if (matchesSearch && matchesNutrient) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            }
-        }
-
-        function resetFilters() {
-            document.getElementById('search-input').value = '';
-            document.getElementById('filter-nutrient').value = 'ALL';
-            filterTable();
-        }
-
-        function handleContact(e) {
-            e.preventDefault();
-            document.getElementById('form-success').classList.remove('hidden');
-            document.getElementById('contact-form').reset();
-        }
     </script>
 </body>
 </html>
